@@ -7,3 +7,5 @@
 5. Go to the "client" folder
 6. Run "npm install"
 7. Run "npm run dev"
+
+Enjoy :)

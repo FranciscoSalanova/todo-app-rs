@@ -4003,7 +4003,6 @@
       "body": "perspiciatis quis doloremque\nveniam nisi eos velit sed\nid totam inventore voluptatem laborum et eveniet\naut aut aut maxime quia temporibus ut omnis"
     }
   ],
-
   "photos": [
     {
       "albumId": 1,
@@ -39006,7 +39005,6 @@
       "thumbnailUrl": "https://via.placeholder.com/150/6dd9cb"
     }
   ],
-
   "posts": [
     {
       "userId": 1,
@@ -40809,9 +40807,42 @@
       "id": 200,
       "title": "ipsam aperiam voluptates qui",
       "completed": false
+    },
+    {
+      "title": "hola",
+      "id": 201
+    },
+    {
+      "title": "aaaaa",
+      "completed": false,
+      "id": 202
+    },
+    {
+      "title": "hola",
+      "completed": false,
+      "id": 203
+    },
+    {
+      "title": "chau",
+      "completed": false,
+      "id": 204
+    },
+    {
+      "title": "adios",
+      "completed": false,
+      "id": 205
+    },
+    {
+      "title": "adios",
+      "completed": false,
+      "id": 206
+    },
+    {
+      "title": "jajaja",
+      "completed": false,
+      "id": 207
     }
   ],
-
   "users": [
     {
       "id": 1,

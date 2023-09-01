@@ -1,8 +1,18 @@
-import { Form, Link, useLoaderData } from 'react-router-dom'
+import { Form, Link, useLoaderData, useNavigation } from 'react-router-dom'
 import TodoItem from '../Components/TodoItem'
+import { useEffect, useRef } from 'react'
 
 const TodoList = () => {
-  const todos = useLoaderData()
+  const {
+    todos,
+    searchParams: { query },
+  } = useLoaderData()
+  const { state } = useNavigation()
+  const queryRef = useRef()
+
+  useEffect(() => {
+    queryRef.current.value = query
+  }, [query])
 
   return (
     <>
@@ -16,21 +26,24 @@ const TodoList = () => {
           </div>
         </h1>
 
-        <Form className="form">
+        <Form className="form" method="get" action="/">
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="query">Search</label>
-              <input type="search" name="query" id="query" />
+              <input type="search" name="query" id="query" ref={queryRef} />
             </div>
             <button className="btn">Search</button>
           </div>
         </Form>
-
-        <ul>
-          {todos.map((todo) => {
-            return <TodoItem key={todo.id} {...todo} />
-          })}
-        </ul>
+        {state === 'loading' ? (
+          'Loading'
+        ) : (
+          <ul>
+            {todos.map((todo) => {
+              return <TodoItem key={todo.id} {...todo} />
+            })}
+          </ul>
+        )}
       </div>
     </>
   )
